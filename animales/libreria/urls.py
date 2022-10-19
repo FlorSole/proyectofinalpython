@@ -12,5 +12,6 @@ urlpatterns =   [
     path('usuarios/', views.index, name='usuarios.urls'),
     path('perros', views.perros, name='perros.urls'),
     path('gatos', views.gatos, name='gatos.urls'),
+    path('contacto', views.contacto, name='contacto.urls'),
 
 ]
