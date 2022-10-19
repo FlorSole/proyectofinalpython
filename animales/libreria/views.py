@@ -14,3 +14,9 @@ def index(request):
 
 def peluditos(request):
     return render(request, 'peluditos.html')
+
+def perros(request):
+    return render(request, 'paginas/perros.html')
+
+def gatos(request):
+    return render(request, 'paginas/gatos.html')

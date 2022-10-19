@@ -10,5 +10,7 @@ urlpatterns =   [
     path('index', views.index, name='index'),
     path('peluditos', views.peluditos, name='peluditos'),
     path('usuarios/', views.index, name='usuarios.urls'),
+    path('perros', views.perros, name='perros.urls'),
+    path('gatos', views.gatos, name='gatos.urls'),
 
 ]
