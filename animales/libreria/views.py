@@ -20,3 +20,7 @@ def perros(request):
 
 def gatos(request):
     return render(request, 'paginas/gatos.html')
+
+
+
+    
