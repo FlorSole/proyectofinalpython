@@ -10,4 +10,4 @@ def nosotros(request):
     return render(request, 'paginas/nosotros.html')
 
 def padre(request):
-    return render(request, 'padre.html')
+    return render(request, 'index.html')
