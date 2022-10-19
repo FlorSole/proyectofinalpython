@@ -9,5 +9,8 @@ def inicio(request):
 def nosotros(request):
     return render(request, 'paginas/nosotros.html')
 
-def padre(request):
+def index(request):
     return render(request, 'index.html')
+
+def peluditos(request):
+    return render(request, 'peluditos.html')
