@@ -76,3 +76,8 @@ def contacto(request):
 #Usuarios/Adoptantes- Animales - photo #
 
 
+def login(request):    
+    return render(request, 'paginas/login.html')
+
+def registro(request):
+    return render(request, 'paginas/registro.html')
