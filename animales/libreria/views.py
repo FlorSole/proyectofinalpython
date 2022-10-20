@@ -23,3 +23,9 @@ def gatos(request):
 
 def contacto(request):
     return render(request, 'paginas/contacto.html')
+
+def login(request):    
+    return render(request, 'paginas/login.html')
+
+def registro(request):
+    return render(request, 'paginas/registro.html')
