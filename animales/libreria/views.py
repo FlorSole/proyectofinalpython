@@ -1,6 +1,7 @@
 from tkinter import PhotoImage
 from django.shortcuts import render
 from django.http import HttpResponse
+from libreria.forms import registroUzu
 from libreria.forms import animalform, usuarioform
 from libreria.models import animales, usuario
 from libreria import models
@@ -81,3 +82,22 @@ def login(request):
 
 def registro(request):
     return render(request, 'paginas/registro.html')
+
+
+def registroUsuario(request):
+
+
+    if request.method == "POST":
+
+
+        formulario = registroUzu(request.POST)
+
+        if formulario.is_valid():
+
+            info= formulario.cleaned_data
+
+            u = usuario(nombre=info["nombre"],edad=info["edad"],email=info["email"])
+
+
+
+    return render(request, 'pagina/index.html')

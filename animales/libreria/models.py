@@ -6,10 +6,10 @@ from django.db import models
 
 
 
-class usuario(models.Model):
+class Usuario(models.Model):
 
     nombre= models.CharField(max_length=60)
-    edad= models.IntegerField()
+    contraseña= models.CharField()
     email=models.EmailField()
 
 

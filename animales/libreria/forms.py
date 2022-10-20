@@ -21,3 +21,16 @@ class animalform(forms.Form):
     sexo = forms.CharField(max_length=60)
     edad = forms.IntegerField()
     foto= forms.ImageField()
+
+
+
+
+
+class registroUzu(forms.Form):
+
+
+    usuario= forms.CharField(max_length=60)
+    email= forms.EmailInput()
+    contraseña= forms.PasswordInput()
+    repetircontraseña= forms.PasswordInput()
+
