@@ -1,9 +1,11 @@
 from tkinter import PhotoImage
+from django.forms import PasswordInput
 from django.shortcuts import render
 from django.http import HttpResponse
+#from animales.libreria.models import usuarios 
 from libreria.forms import registroUzu
 from libreria.forms import animalform, usuarioform
-from libreria.models import animales, usuario
+from libreria.models import animales, Usuarios
 from libreria import models
 
 # Create your views here.
@@ -27,7 +29,7 @@ def usuario(request):
 
             info = formulario.cleaned_data
 
-            usuario = usuario(nombre=info["nombre"], edad=info["edad"], mail=info["email"])
+            usuario = Usuarios(nombre=info["nombre"], edad=info["edad"], mail=info["email"])
 
 
             usuario.save()
