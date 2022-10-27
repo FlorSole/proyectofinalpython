@@ -29,3 +29,6 @@ def login(request):
 
 def registro(request):
     return render(request, 'paginas/registro.html')
+
+def usuario(request):
+    return render(request, 'paginas/usuario.html')
