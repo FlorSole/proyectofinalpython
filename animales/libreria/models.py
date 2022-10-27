@@ -1,4 +1,5 @@
 
+from tabnanny import verbose
 from django.db import models
 
 
@@ -13,15 +14,25 @@ class Usuarios(models.Model):
     email=models.EmailField()
 
 
-class animales(models.Model):
+class Perritos(models.Model):
 
     nombre= models.CharField(max_length=60)
-    tipo=models.CharField(max_length=60)
+    raza=models.CharField(max_length=60)
     edad=models.IntegerField()
-    foto = models.ImageField(upload_to='img')
+    fotoperri = models.ImageField(upload_to = 'libreria/static/assets/img', verbose_name = 'Perri', null=True)
     
     
     def __str__(self):
-        return self.title
+        return f"Nombre: {self.nombre} - Edad: {self.edad} - Raza: {self.raza} - Foto: {self.foto}"
 
 
+class Gatitos(models.Model):
+
+    nombre= models.CharField(max_length=60)
+    raza=models.CharField(max_length=60)
+    edad=models.IntegerField()
+    fotogati = models.ImageField(upload_to = 'libreria/static/assets/img', verbose_name = 'Gati', null=True)
+    
+    
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Edad: {self.edad} - Raza: {self.raza} - Foto: {self.foto}"
